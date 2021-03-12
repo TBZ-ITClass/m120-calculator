@@ -43,3 +43,6 @@ Abgabe bis Donnerstag, 18. März 2021 um 22:00 Uhr
 - Das Wurzelzeichen kann mit dem String "u221a" abgebildet werden. Einfach den Text des Buttons auf "u221a" setzen.
 - Ein neues Subwindow kann man mit "Stage subWindow = new Stage()" erstellen. Die Modalität kann mit setModality(...) gesetzt werden mit show() wird das Subwindow angezeigt. Vergesst nicht, dieser neuen Stage eine Scene und ein Layout zu setzen.
 - Für das Menu sind die Klassen MenuBar, Menu und MenuItem zu verwenden.
+
+
+[](https://github.com/TBZ-ITClass/m120-calculator)
