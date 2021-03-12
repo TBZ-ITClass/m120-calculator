@@ -1,4 +1,4 @@
 package io.genetv.calculator.controller;
 
-public class Controller {
+public class MathController {
 }
