@@ -17,31 +17,11 @@ import java.io.IOException;
 
 public class MathController {
 
-
-    public void openBackgroundSettings(ActionEvent actionEvent) throws IOException {
-        System.out.println("Background color changer");
-
-        Stage newWindow = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Main.class.getResource("settingsLayout.fxml"));
-
-
-        GridPane subPane = (GridPane) fxmlLoader.load();
-        Scene subScene = new Scene(subPane, 350, 175);
-
-        newWindow.initModality(Modality.APPLICATION_MODAL);
-
-        newWindow.setScene(subScene);
-        newWindow.setTitle("Background Color");
-        newWindow.setResizable(true);
-        newWindow.show();
-
-    }
-
+    @FXML
+    private GridPane backgroundGrid;
 
     @FXML
     private TextField calcDisplay;
-
 
     public void handleInput(ActionEvent event) {
 
@@ -76,5 +56,25 @@ public class MathController {
                 calcDisplay.setText(input + ((Button)event.getSource()).getText());
                 break;
         }
+    }
+
+    public void openBackgroundSettings(ActionEvent actionEvent) throws IOException {
+
+        System.out.println(backgroundGrid);
+
+        Stage newWindow = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(Main.class.getResource("settingsLayout.fxml"));
+        fxmlLoader.setController(new BackgroundController(backgroundGrid));
+
+        GridPane subPane = (GridPane) fxmlLoader.load();
+        Scene subScene = new Scene(subPane, 350, 175);
+
+        newWindow.initModality(Modality.APPLICATION_MODAL);
+
+        newWindow.setScene(subScene);
+        newWindow.setTitle("Background Color");
+        newWindow.setResizable(true);
+        newWindow.show();
     }
 }
