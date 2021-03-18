@@ -10,11 +10,12 @@ public class BackgroundController {
     @FXML
     GridPane backgroundGrid;
 
-
     public void setColor(ActionEvent event) {
 
+        System.out.println(backgroundGrid);
+
         String color = ((Button)event.getSource()).getText();
-        backgroundGrid.setStyle("-fx-background-color: " + color + ";");
+        //backgroundGrid.setStyle("-fx-background-color: " + color + ";");
 
     }
 }
