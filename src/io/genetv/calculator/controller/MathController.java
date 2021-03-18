@@ -27,7 +27,7 @@ public class MathController {
 
 
         GridPane subPane = (GridPane) fxmlLoader.load();
-        Scene subScene = new Scene(subPane, 200, 100);
+        Scene subScene = new Scene(subPane, 350, 175);
 
         newWindow.initModality(Modality.APPLICATION_MODAL);
 

@@ -9,16 +9,18 @@
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Label style="-fx-font-size: 20px;" text="Select a background color" GridPane.columnSpan="2147483647" />
-      <Button mnemonicParsing="false" text="Red" GridPane.rowIndex="1" onAction="#setColor"/>
-      <Button mnemonicParsing="false" text="Green" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#setColor"/>
-      <Button mnemonicParsing="false" text="Blue" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#setColor"/>
+      <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#setColor" prefHeight="75.0" prefWidth="75.0" text="Red" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#setColor" prefHeight="75.0" prefWidth="75.0" text="Green" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#setColor" prefHeight="75.0" prefWidth="75.0" text="Blue" GridPane.columnIndex="2" GridPane.rowIndex="1" />
    </children>
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
